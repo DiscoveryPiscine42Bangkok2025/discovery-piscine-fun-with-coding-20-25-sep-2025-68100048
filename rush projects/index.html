@@ -133,6 +133,26 @@ function backToTop() {
   location.hash = 'top';
 }
 </script>
+  <script>
+function showCV(person) {
+  if(person === 'A') {
+    document.getElementById('cv1').style.display = 'block';
+    document.getElementById('cv2').style.display = 'none';
+    document.getElementById('cv1').scrollIntoView({ behavior: 'smooth' });
+  } else {
+    document.getElementById('cv1').style.display = 'none';
+    document.getElementById('cv2').style.display = 'block';
+    document.getElementById('cv2').scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function backToTop() {
+  document.getElementById('cv1').style.display = 'none';
+  document.getElementById('cv2').style.display = 'none';
+  document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
 
 </body>
 </html>
