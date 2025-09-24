@@ -1,140 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Java & Namfar</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- เมนูหลัก -->
-  <nav>
-    <a onclick="showSection('home')">Home</a>
-    <a onclick="showSection('skills')">Skills</a>
-    <a onclick="showSection('projects')">Projects</a>
-    <a onclick="showSection('contact')">Contact</a>
-  </nav>
 
-  <!-- หน้าเลือก Portfolio -->
-  <section id="home" class="active">
-    <div class="card">
-      <h1>Choose Portfolio</h1>
-      <div class="choice">
-        <div onclick="setPortfolio('java')">
-          <img src="java.jpg" alt="Java">
-          <p>Java</p>
-        </div>
-        <div onclick="setPortfolio('namfar')">
-          <img src="namfar.jpg" alt="Namfar">
-          <p>Namfar</p>
-        </div>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <h2 class="logo">Java Portfolio</h2>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- About -->
+<section id="about" class="section about">
+  <div class="container">
+    <img src="java.jpg" alt="Java Photo" class="profile-img">
+    <h1>Natchanan Gothanaparsert</h1>
+    <p>First-year student, Faculty of Business Administration,<br>
+    Department of Economics and Management<br>
+    King Mongkut's Institute of Technology Ladkrabang</p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section skills">
+  <div class="container">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Communication</div>
+      <div class="skill">Strong Interpersonal</div>
+      <div class="skill">Problem Solving</div>
+      <div class="skill">Cooking</div>
+      <div class="skill">Drawing</div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Presentation Competition</h3>
+        <p>Won first place in the national student council presentation competition.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Profile -->
-  <section id="profile">
-    <div class="card" id="profile-content"></div>
-  </section>
+<!-- Contact -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:68100048@kmitl.ac.th">68100048@kmitl.ac.th</a></p>
+    <p>Phone: <a href="tel:0886085968">088-608-5968</a></p>
+  </div>
+</section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <div class="card" id="skills-content"></div>
-  </section>
+<footer>
+  <p>&copy; 2025 Natchanan Gothanaparsert</p>
+</footer>
 
-  <!-- Projects -->
-  <section id="projects">
-    <div class="card" id="projects-content"></div>
-  </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namfar Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <!-- Contact -->
-  <section id="contact">
-    <div class="card" id="contact-content"></div>
-  </section>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <h2 class="logo">Namfar Portfolio</h2>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <script>
-    let currentPortfolio = null;
+<!-- About -->
+<section id="about" class="section about">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:20px;justify-content:center;flex-wrap:wrap;">
+      <img src="namfar.jpg" alt="Namfar Photo" class="profile-img">
+      <div>
+        <h1>Artitaya Nathnuea</h1>
+        <p>1st Year Student<br>
+        Faculty of Business Administration,<br>
+        Department of Economics and Management,<br>
+        King Mongkut's Institute of Technology Ladkrabang</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    const data = {
-      java: {
-        profile: `
-          <img src="java.jpg" class="profile-pic">
-          <h2>Natchanan Gothanaparsert</h2>
-          <p>First-year student, Faculty of Business Administration,<br>
-          Department of Economics and Management,<br>
-          King Mongkut's Institute of Technology Ladkrabang</p>
-        `,
-        skills: `
-          <h2>My Skills</h2>
-          <ul>
-            <li>Communication Skills</li>
-            <li>Strong Interpersonal Communication Skills</li>
-            <li>Problem-solving</li>
-            <li>Analyze problems and find the best solution</li>
-          </ul>
-          <h3>Hobbies</h3>
-          <ul>
-            <li>Watching movies</li>
-            <li>Cooking</li>
-            <li>Drawing</li>
-          </ul>
-        `,
-        projects: `
-          <h2>My Projects</h2>
-          <p><b>Presentation Competition</b><br>
-          Won first place in the national student council presentation competition.</p>
-        `,
-        contact: `
-          <h2>Contact Me</h2>
-          <p>Email: 68100048@kmitl.ac.th<br>
-          Phone: 088 608 5968</p>
-        `
-      },
-      namfar: {
-        profile: `
-          <img src="namfar.jpg" class="profile-pic">
-          <h2>Artitaya Nathnuea</h2>
-          <p>1st Year Student<br>
-          Faculty of Business Administration,<br>
-          Department of Economics and Management,<br>
-          King Mongkut's Institute of Technology Ladkrabang</p>
-        `,
-        skills: `
-          <h2>My Skills</h2>
-          <ul>
-            <li>Playing guitar, bass, piano</li>
-            <li>Adobe Photoshop, Illustrator, Premiere Pro</li>
-            <li>Drawing</li>
-            <li>Content creating</li>
-            <li>Communication skill</li>
-          </ul>
-        `,
-        projects: `
-          <h2>My Projects</h2>
-          <p><b>International Young Physicists' Tournament 2020-2021</b></p>
-        `,
-        contact: `
-          <h2>My Contact</h2>
-          <p>Email: 68100619@kmitl.ac.th<br>
-          Tel: 0638125938</p>
-        `
-      }
-    };
+<!-- Skills -->
+<section id="skills" class="section skills">
+  <div class="container">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Playing guitar/bass/piano</div>
+      <div class="skill">Adobe Photoshop</div>
+      <div class="skill">Illustrator</div>
+      <div class="skill">Premiere Pro</div>
+      <div class="skill">Drawing</div>
+      <div class="skill">Content Creating</div>
+      <div class="skill">Communication</div>
+    </div>
+  </div>
+</section>
 
-    function setPortfolio(name) {
-      currentPortfolio = name;
-      document.getElementById("profile-content").innerHTML = data[name].profile;
-      document.getElementById("skills-content").innerHTML = data[name].skills;
-      document.getElementById("projects-content").innerHTML = data[name].projects;
-      document.getElementById("contact-content").innerHTML = data[name].contact;
-      showSection('profile');
-    }
+<!-- Projects -->
+<section id="projects" class="section projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>International Young Physicists' Tournament</h3>
+        <p>2020-2021</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    function showSection(id) {
-      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
-    }
-  </script>
+<!-- Contact -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <h2>My Contact</h2>
+    <p>Email: <a href="mailto:68100619@kmitl.ac.th">68100619@kmitl.ac.th</a></p>
+    <p>Tel: <a href="tel:0638125938">063-812-5938</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Artitaya Nathnuea</p>
+</footer>
+
 </body>
 </html>
