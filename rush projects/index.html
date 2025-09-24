@@ -1,143 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Portfolio</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+  scroll-behavior: smooth;
+}
+section {
+  padding: 60px 0;
+}
+#cv1, #cv2 {
+  display: none; /* เริ่มซ่อน CV ทั้งสองคน */
+}
+</style>
 </head>
 <body>
 
-  <!-- ===== หน้าเลือกคน ===== -->
-  <div id="home" class="home-screen active">
-    <h1 class="title">Choose a Portfolio</h1>
-    <div class="choice-container">
-      <div class="choice" onclick="showPortfolio('natchanan')">
-        <img src="natchanan.jpg" alt="Natchanan">
-        <h2>Natchanan</h2>
-      </div>
-      <div class="choice" onclick="showPortfolio('namfar')">
-        <img src="namfar.jpg" alt="Namfar">
-        <h2>Namfar</h2>
-      </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+  <a class="navbar-brand" href="#">My Portfolio</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<header id="top" class="bg-primary text-white text-center" style="padding:120px 0;">
+<div class="container">
+  <h1>Welcome to Our Portfolio</h1>
+  <p class="lead">Choose a profile below:</p>
+  <button class="btn btn-light btn-lg m-2" onclick="showCV('A')">Person A</button>
+  <button class="btn btn-light btn-lg m-2" onclick="showCV('B')">Person B</button>
+</div>
+</header>
+
+<!-- CV1 Section -->
+<section id="cv1">
+<div class="container">
+  <h2 class="text-center">Person A</h2>
+  <p class="text-center">Introduce yourself, add photo, background, skills.</p>
+  <div class="row">
+    <div class="col-md-4">
+      <img src="https://via.placeholder.com/300" class="img-fluid rounded" alt="Person A">
+    </div>
+    <div class="col-md-8">
+      <h4>About</h4>
+      <p>Some info about Person A...</p>
+      <h4>Skills & Showcase</h4>
+      <ul>
+        <li>Skill 1</li>
+        <li>Skill 2</li>
+      </ul>
     </div>
   </div>
-
-  <!-- ===== Portfolio Natchanan ===== -->
-  <div id="natchanan" class="portfolio">
-    <nav class="navbar">
-      <div class="container">
-        <h2 class="logo">Natchanan</h2>
-        <ul class="nav-links">
-          <li><a href="#" onclick="goHome()">Home</a></li>
-          <li><a href="#skills-natchanan">Skills</a></li>
-          <li><a href="#projects-natchanan">Projects</a></li>
-          <li><a href="#contact-natchanan">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <section class="section about">
-      <div class="container">
-        <img src="natchanan.jpg" alt="Natchanan" class="profile-img">
-        <h1>Natchanan Gothanaparsert</h1>
-        <p>First-year student, Faculty of Business Administration,<br>
-        Department of Economics and Management<br>
-        King Mongkut's Institute of Technology Ladkrabang</p>
-      </div>
-    </section>
-
-    <section id="skills-natchanan" class="section skills">
-      <div class="container">
-        <h2>My Skills</h2>
-        <ul>
-          <li>Communication Skills</li>
-          <li>Strong Interpersonal Communication</li>
-          <li>Problem-solving</li>
-          <li>Watching movies, cooking, drawing</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects-natchanan" class="section projects">
-      <div class="container">
-        <h2>My Projects</h2>
-        <p>Presentation Competition – Won first place in the national student council presentation competition.</p>
-      </div>
-    </section>
-
-    <section id="contact-natchanan" class="section contact">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:68100048@kmitl.ac.th">68100048@kmitl.ac.th</a></p>
-        <p>Phone: 088 608 5968</p>
-      </div>
-    </section>
+  <div class="text-center my-3">
+    <button class="btn btn-secondary" onclick="backToTop()">Back to selection</button>
   </div>
+</div>
+</section>
 
-  <!-- ===== Portfolio Namfar ===== -->
-  <div id="namfar" class="portfolio">
-    <nav class="navbar">
-      <div class="container">
-        <h2 class="logo">Namfar</h2>
-        <ul class="nav-links">
-          <li><a href="#" onclick="goHome()">Home</a></li>
-          <li><a href="#skills-namfar">Skills</a></li>
-          <li><a href="#projects-namfar">Projects</a></li>
-          <li><a href="#contact-namfar">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <section class="section about">
-      <div class="container">
-        <img src="namfar.jpg" alt="Namfar" class="profile-img">
-        <h1>Artitaya Nathnuea</h1>
-        <p>First-year student, Faculty of Business Administration,<br>
-        Department of Economics and Management<br>
-        King Mongkut's Institute of Technology Ladkrabang</p>
-      </div>
-    </section>
-
-    <section id="skills-namfar" class="section skills">
-      <div class="container">
-        <h2>My Skills</h2>
-        <ul>
-          <li>Playing guitar, bass, piano</li>
-          <li>Using Adobe Photoshop, Illustrator, Premiere Pro</li>
-          <li>Drawing</li>
-          <li>Content creating</li>
-          <li>Communication skill</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects-namfar" class="section projects">
-      <div class="container">
-        <h2>My Projects</h2>
-        <p>International Young Physicists' Tournament 2020-2021</p>
-      </div>
-    </section>
-
-    <section id="contact-namfar" class="section contact">
-      <div class="container">
-        <h2>My Contact</h2>
-        <p>Email: <a href="mailto:68100619@kmitl.ac.th">68100619@kmitl.ac.th</a></p>
-        <p>Tel: 063 812 5938</p>
-      </div>
-    </section>
+<!-- CV2 Section -->
+<section id="cv2" class="bg-light">
+<div class="container">
+  <h2 class="text-center">Person B</h2>
+  <p class="text-center">Introduce yourself, add photo, background, skills.</p>
+  <div class="row">
+    <div class="col-md-4">
+      <img src="https://via.placeholder.com/300" class="img-fluid rounded" alt="Person B">
+    </div>
+    <div class="col-md-8">
+      <h4>About</h4>
+      <p>Some info about Person B...</p>
+      <h4>Skills & Showcase</h4>
+      <ul>
+        <li>Skill A</li>
+        <li>Skill B</li>
+      </ul>
+    </div>
   </div>
+  <div class="text-center my-3">
+    <button class="btn btn-secondary" onclick="backToTop()">Back to selection</button>
+  </div>
+</div>
+</section>
 
-  <script>
-    function showPortfolio(name) {
-      document.querySelector('.home-screen').classList.remove('active');
-      document.querySelectorAll('.portfolio').forEach(p => p.classList.remove('active'));
-      document.getElementById(name).classList.add('active');
-    }
-    function goHome() {
-      document.querySelectorAll('.portfolio').forEach(p => p.classList.remove('active'));
-      document.querySelector('.home-screen').classList.add('active');
-    }
-  </script>
+<!-- Contact Section -->
+<section id="contact">
+<div class="container text-center">
+  <h2>Contact</h2>
+  <p>Find us on social media:</p>
+  <a href="https://github.com/" class="btn btn-dark m-2">GitHub</a>
+  <a href="https://linkedin.com/" class="btn btn-primary m-2">LinkedIn</a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+<p>© 2025 Portfolio by Person A & Person B</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script>
+function showCV(person) {
+  if(person === 'A') {
+    document.getElementById('cv1').style.display = 'block';
+    document.getElementById('cv2').style.display = 'none';
+    location.hash = 'cv1';
+  } else {
+    document.getElementById('cv1').style.display = 'none';
+    document.getElementById('cv2').style.display = 'block';
+    location.hash = 'cv2';
+  }
+}
+
+function backToTop() {
+  document.getElementById('cv1').style.display = 'none';
+  document.getElementById('cv2').style.display = 'none';
+  location.hash = 'top';
+}
+</script>
+
 </body>
 </html>
