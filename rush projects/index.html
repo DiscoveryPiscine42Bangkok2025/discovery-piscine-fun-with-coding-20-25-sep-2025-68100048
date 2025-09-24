@@ -5,20 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Java & Namfar</title>
   <link rel="stylesheet" href="style.css">
-  <!-- ฟอนต์ -->
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- หน้าแรก เลือก Portfolio -->
+  <!-- เมนูหลัก -->
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('skills')">Skills</a>
+    <a onclick="showSection('projects')">Projects</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <!-- หน้าเลือก Portfolio -->
   <section id="home" class="active">
     <div class="card">
       <h1>Choose Portfolio</h1>
       <div class="choice">
-        <div onclick="showSection('java-profile')">
+        <div onclick="setPortfolio('java')">
           <img src="java.jpg" alt="Java">
           <p>Java</p>
         </div>
-        <div onclick="showSection('namfar-profile')">
+        <div onclick="setPortfolio('namfar')">
           <img src="namfar.jpg" alt="Namfar">
           <p>Namfar</p>
         </div>
@@ -26,140 +33,104 @@
     </div>
   </section>
 
-  <!-- Portfolio Java -->
-  <section id="java-profile">
-    <nav>
-      <a onclick="showSection('home')">Home</a>
-      <a onclick="showSection('java-skills')">Skills</a>
-      <a onclick="showSection('java-projects')">Projects</a>
-      <a onclick="showSection('java-contact')">Contact</a>
-    </nav>
-    <div class="card">
-      <img src="java.jpg" class="profile-pic">
-      <h2>Natchanan Gothanaparsert</h2>
-      <p>First-year student, Faculty of Business Administration,<br>
-      Department of Economics and Management,<br>
-      King Mongkut's Institute of Technology Ladkrabang</p>
-    </div>
+  <!-- Profile -->
+  <section id="profile">
+    <div class="card" id="profile-content"></div>
   </section>
 
-  <section id="java-skills">
-    <nav>
-      <a onclick="showSection('home')">Home</a>
-      <a onclick="showSection('java-profile')">Profile</a>
-      <a onclick="showSection('java-projects')">Projects</a>
-      <a onclick="showSection('java-contact')">Contact</a>
-    </nav>
-    <div class="card">
-      <h2>My Skills</h2>
-      <ul>
-        <li>Communication Skills</li>
-        <li>Strong Interpersonal Communication Skills</li>
-        <li>Problem-solving</li>
-        <li>Analyze problems and find the best solution</li>
-      </ul>
-      <h3>Hobbies</h3>
-      <ul>
-        <li>Watching movies</li>
-        <li>Cooking</li>
-        <li>Drawing</li>
-      </ul>
-    </div>
+  <!-- Skills -->
+  <section id="skills">
+    <div class="card" id="skills-content"></div>
   </section>
 
-  <section id="java-projects">
-    <nav>
-      <a onclick="showSection('home')">Home</a>
-      <a onclick="showSection('java-profile')">Profile</a>
-      <a onclick="showSection('java-skills')">Skills</a>
-      <a onclick="showSection('java-contact')">Contact</a>
-    </nav>
-    <div class="card">
-      <h2>My Projects</h2>
-      <p><b>Presentation Competition</b><br>
-      Won first place in the national student council presentation competition.</p>
-    </div>
+  <!-- Projects -->
+  <section id="projects">
+    <div class="card" id="projects-content"></div>
   </section>
 
-  <section id="java-contact">
-    <nav>
-      <a onclick="showSection('home')">Home</a>
-      <a onclick="showSection('java-profile')">Profile</a>
-      <a onclick="showSection('java-skills')">Skills</a>
-      <a onclick="showSection('java-projects')">Projects</a>
-    </nav>
-    <div class="card">
-      <h2>Contact Me</h2>
-      <p>Email: 68100048@kmitl.ac.th<br>
-      Phone: 088 608 5968</p>
-    </div>
-  </section>
-
-  <!-- Portfolio Namfar -->
-  <section id="namfar-profile">
-    <nav>
-      <a onclick="showSection('home')">Home</a>
-      <a onclick="showSection('namfar-skills')">Skills</a>
-      <a onclick="showSection('namfar-projects')">Projects</a>
-      <a onclick="showSection('namfar-contact')">Contact</a>
-    </nav>
-    <div class="card">
-      <img src="namfar.jpg" class="profile-pic">
-      <h2>Artitaya Nathnuea</h2>
-      <p>1st Year Student<br>
-      Faculty of Business Administration,<br>
-      Department of Economics and Management,<br>
-      King Mongkut's Institute of Technology Ladkrabang</p>
-    </div>
-  </section>
-
-  <section id="namfar-skills">
-    <nav>
-      <a onclick="showSection('home')">Home</a>
-      <a onclick="showSection('namfar-profile')">Profile</a>
-      <a onclick="showSection('namfar-projects')">Projects</a>
-      <a onclick="showSection('namfar-contact')">Contact</a>
-    </nav>
-    <div class="card">
-      <h2>My Skills</h2>
-      <ul>
-        <li>Playing guitar, bass, piano</li>
-        <li>Adobe Photoshop, Illustrator, Premiere Pro</li>
-        <li>Drawing</li>
-        <li>Content creating</li>
-        <li>Communication skill</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="namfar-projects">
-    <nav>
-      <a onclick="showSection('home')">Home</a>
-      <a onclick="showSection('namfar-profile')">Profile</a>
-      <a onclick="showSection('namfar-skills')">Skills</a>
-      <a onclick="showSection('namfar-contact')">Contact</a>
-    </nav>
-    <div class="card">
-      <h2>My Projects</h2>
-      <p><b>International Young Physicists' Tournament 2020-2021</b></p>
-    </div>
-  </section>
-
-  <section id="namfar-contact">
-    <nav>
-      <a onclick="showSection('home')">Home</a>
-      <a onclick="showSection('namfar-profile')">Profile</a>
-      <a onclick="showSection('namfar-skills')">Skills</a>
-      <a onclick="showSection('namfar-projects')">Projects</a>
-    </nav>
-    <div class="card">
-      <h2>My Contact</h2>
-      <p>Email: 68100619@kmitl.ac.th<br>
-      Tel: 0638125938</p>
-    </div>
+  <!-- Contact -->
+  <section id="contact">
+    <div class="card" id="contact-content"></div>
   </section>
 
   <script>
+    let currentPortfolio = null;
+
+    const data = {
+      java: {
+        profile: `
+          <img src="java.jpg" class="profile-pic">
+          <h2>Natchanan Gothanaparsert</h2>
+          <p>First-year student, Faculty of Business Administration,<br>
+          Department of Economics and Management,<br>
+          King Mongkut's Institute of Technology Ladkrabang</p>
+        `,
+        skills: `
+          <h2>My Skills</h2>
+          <ul>
+            <li>Communication Skills</li>
+            <li>Strong Interpersonal Communication Skills</li>
+            <li>Problem-solving</li>
+            <li>Analyze problems and find the best solution</li>
+          </ul>
+          <h3>Hobbies</h3>
+          <ul>
+            <li>Watching movies</li>
+            <li>Cooking</li>
+            <li>Drawing</li>
+          </ul>
+        `,
+        projects: `
+          <h2>My Projects</h2>
+          <p><b>Presentation Competition</b><br>
+          Won first place in the national student council presentation competition.</p>
+        `,
+        contact: `
+          <h2>Contact Me</h2>
+          <p>Email: 68100048@kmitl.ac.th<br>
+          Phone: 088 608 5968</p>
+        `
+      },
+      namfar: {
+        profile: `
+          <img src="namfar.jpg" class="profile-pic">
+          <h2>Artitaya Nathnuea</h2>
+          <p>1st Year Student<br>
+          Faculty of Business Administration,<br>
+          Department of Economics and Management,<br>
+          King Mongkut's Institute of Technology Ladkrabang</p>
+        `,
+        skills: `
+          <h2>My Skills</h2>
+          <ul>
+            <li>Playing guitar, bass, piano</li>
+            <li>Adobe Photoshop, Illustrator, Premiere Pro</li>
+            <li>Drawing</li>
+            <li>Content creating</li>
+            <li>Communication skill</li>
+          </ul>
+        `,
+        projects: `
+          <h2>My Projects</h2>
+          <p><b>International Young Physicists' Tournament 2020-2021</b></p>
+        `,
+        contact: `
+          <h2>My Contact</h2>
+          <p>Email: 68100619@kmitl.ac.th<br>
+          Tel: 0638125938</p>
+        `
+      }
+    };
+
+    function setPortfolio(name) {
+      currentPortfolio = name;
+      document.getElementById("profile-content").innerHTML = data[name].profile;
+      document.getElementById("skills-content").innerHTML = data[name].skills;
+      document.getElementById("projects-content").innerHTML = data[name].projects;
+      document.getElementById("contact-content").innerHTML = data[name].contact;
+      showSection('profile');
+    }
+
     function showSection(id) {
       document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
       document.getElementById(id).classList.add("active");
