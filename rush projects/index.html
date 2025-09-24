@@ -3,35 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Portfolio</title>
+  <title>Portfolio - Java & Namfar</title>
   <link rel="stylesheet" href="style.css">
+  <!-- ฟอนต์ -->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- หน้าแรก เลือก Java หรือ Namfar -->
-  <section id="home" class="home">
-    <h1>Select Portfolio</h1>
-    <div class="profiles">
-      <a href="#java-profile" class="card">
-        <img src="java.jpg" alt="Java">
-        <p>Java</p>
-      </a>
-      <a href="#namfar-profile" class="card">
-        <img src="namfar.jpg" alt="Namfar">
-        <p>Namfar</p>
-      </a>
+  <!-- หน้าแรก เลือก Portfolio -->
+  <section id="home" class="active">
+    <div class="card">
+      <h1>Choose Portfolio</h1>
+      <div class="choice">
+        <div onclick="showSection('java-profile')">
+          <img src="java.jpg" alt="Java">
+          <p>Java</p>
+        </div>
+        <div onclick="showSection('namfar-profile')">
+          <img src="namfar.jpg" alt="Namfar">
+          <p>Namfar</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Portfolio Java -->
-  <section id="java-profile" class="portfolio">
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#java-skills">Skills</a>
-      <a href="#java-projects">Projects</a>
-      <a href="#java-contact">Contact</a>
+  <section id="java-profile">
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('java-skills')">Skills</a>
+      <a onclick="showSection('java-projects')">Projects</a>
+      <a onclick="showSection('java-contact')">Contact</a>
     </nav>
-    <div class="content card">
-      <img src="java.jpg" alt="Java Photo" class="profile-pic">
+    <div class="card">
+      <img src="java.jpg" class="profile-pic">
       <h2>Natchanan Gothanaparsert</h2>
       <p>First-year student, Faculty of Business Administration,<br>
       Department of Economics and Management,<br>
@@ -39,20 +43,20 @@
     </div>
   </section>
 
-  <section id="java-skills" class="portfolio">
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#java-skills">Skills</a>
-      <a href="#java-projects">Projects</a>
-      <a href="#java-contact">Contact</a>
+  <section id="java-skills">
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('java-profile')">Profile</a>
+      <a onclick="showSection('java-projects')">Projects</a>
+      <a onclick="showSection('java-contact')">Contact</a>
     </nav>
-    <div class="content card">
+    <div class="card">
       <h2>My Skills</h2>
       <ul>
         <li>Communication Skills</li>
         <li>Strong Interpersonal Communication Skills</li>
         <li>Problem-solving</li>
-        <li>The ability to analyze problems and find the best solution</li>
+        <li>Analyze problems and find the best solution</li>
       </ul>
       <h3>Hobbies</h3>
       <ul>
@@ -63,99 +67,103 @@
     </div>
   </section>
 
-  <section id="java-projects" class="portfolio">
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#java-skills">Skills</a>
-      <a href="#java-projects">Projects</a>
-      <a href="#java-contact">Contact</a>
+  <section id="java-projects">
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('java-profile')">Profile</a>
+      <a onclick="showSection('java-skills')">Skills</a>
+      <a onclick="showSection('java-contact')">Contact</a>
     </nav>
-    <div class="content card">
+    <div class="card">
       <h2>My Projects</h2>
-      <p>Presentation Competition<br>
+      <p><b>Presentation Competition</b><br>
       Won first place in the national student council presentation competition.</p>
     </div>
   </section>
 
-  <section id="java-contact" class="portfolio">
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#java-skills">Skills</a>
-      <a href="#java-projects">Projects</a>
-      <a href="#java-contact">Contact</a>
+  <section id="java-contact">
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('java-profile')">Profile</a>
+      <a onclick="showSection('java-skills')">Skills</a>
+      <a onclick="showSection('java-projects')">Projects</a>
     </nav>
-    <div class="content card">
+    <div class="card">
       <h2>Contact Me</h2>
-      <p>Email: 68100048@kmitl.ac.th</p>
-      <p>Phone: 088 608 5968</p>
+      <p>Email: 68100048@kmitl.ac.th<br>
+      Phone: 088 608 5968</p>
     </div>
   </section>
 
   <!-- Portfolio Namfar -->
-  <section id="namfar-profile" class="portfolio">
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#namfar-skills">Skills</a>
-      <a href="#namfar-projects">Projects</a>
-      <a href="#namfar-contact">Contact</a>
+  <section id="namfar-profile">
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('namfar-skills')">Skills</a>
+      <a onclick="showSection('namfar-projects')">Projects</a>
+      <a onclick="showSection('namfar-contact')">Contact</a>
     </nav>
-    <div class="content card side-layout">
-      <img src="namfar.jpg" alt="Namfar Photo" class="profile-pic">
-      <div>
-        <h2>Artitaya Nathnuea</h2>
-        <p>1st Year Student<br>
-        Faculty of Business Administration,<br>
-        Department of Economics and Management,<br>
-        King Mongkut's Institute of Technology Ladkrabang</p>
-      </div>
+    <div class="card">
+      <img src="namfar.jpg" class="profile-pic">
+      <h2>Artitaya Nathnuea</h2>
+      <p>1st Year Student<br>
+      Faculty of Business Administration,<br>
+      Department of Economics and Management,<br>
+      King Mongkut's Institute of Technology Ladkrabang</p>
     </div>
   </section>
 
-  <section id="namfar-skills" class="portfolio">
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#namfar-skills">Skills</a>
-      <a href="#namfar-projects">Projects</a>
-      <a href="#namfar-contact">Contact</a>
+  <section id="namfar-skills">
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('namfar-profile')">Profile</a>
+      <a onclick="showSection('namfar-projects')">Projects</a>
+      <a onclick="showSection('namfar-contact')">Contact</a>
     </nav>
-    <div class="content card">
+    <div class="card">
       <h2>My Skills</h2>
       <ul>
         <li>Playing guitar, bass, piano</li>
-        <li>Using Adobe Photoshop, Illustrator, Premiere Pro</li>
+        <li>Adobe Photoshop, Illustrator, Premiere Pro</li>
         <li>Drawing</li>
         <li>Content creating</li>
-        <li>Communicate skill</li>
+        <li>Communication skill</li>
       </ul>
     </div>
   </section>
 
-  <section id="namfar-projects" class="portfolio">
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#namfar-skills">Skills</a>
-      <a href="#namfar-projects">Projects</a>
-      <a href="#namfar-contact">Contact</a>
+  <section id="namfar-projects">
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('namfar-profile')">Profile</a>
+      <a onclick="showSection('namfar-skills')">Skills</a>
+      <a onclick="showSection('namfar-contact')">Contact</a>
     </nav>
-    <div class="content card">
+    <div class="card">
       <h2>My Projects</h2>
-      <p>International Young Physicists' Tournament 2020-2021</p>
+      <p><b>International Young Physicists' Tournament 2020-2021</b></p>
     </div>
   </section>
 
-  <section id="namfar-contact" class="portfolio">
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#namfar-skills">Skills</a>
-      <a href="#namfar-projects">Projects</a>
-      <a href="#namfar-contact">Contact</a>
+  <section id="namfar-contact">
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('namfar-profile')">Profile</a>
+      <a onclick="showSection('namfar-skills')">Skills</a>
+      <a onclick="showSection('namfar-projects')">Projects</a>
     </nav>
-    <div class="content card">
+    <div class="card">
       <h2>My Contact</h2>
-      <p>Email: 68100619@kmitl.ac.th</p>
-      <p>Tel: 0638125938</p>
+      <p>Email: 68100619@kmitl.ac.th<br>
+      Tel: 0638125938</p>
     </div>
   </section>
 
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
 </body>
 </html>
