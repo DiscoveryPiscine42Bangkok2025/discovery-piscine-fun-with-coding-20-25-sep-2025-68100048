@@ -1,143 +1,142 @@
 /* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
-}
-
-/* หน้าแรกเลือกคน */
-.home-screen {
-  display: none;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.home-screen.active {
-  display: block;
-}
-
-.title {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #1e3c72;
-}
-
-.choice-container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.choice {
-  background: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  cursor: pointer;
-  transition: transform 0.3s;
-  text-align: center;
-  width: 200px;
-}
-
-.choice img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.choice:hover {
-  transform: scale(1.05);
+font-family: "Segoe UI", Arial, sans-serif;
+line-height: 1.6;
+color: #333;
+background: #f9f9f9;
 }
 
 /* Navbar */
 .navbar {
-  background: #1e3c72;
-  color: #fff;
-  padding: 15px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+background: #1e3c72;
+color: #fff;
+padding: 15px 0;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
 }
 
 .navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 90%;
+margin: auto;
 }
 
 .logo {
-  font-size: 20px;
+font-size: 20px;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+list-style: none;
+display: flex;
+gap: 20px;
 }
 
 .nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
 }
 
 .nav-links a:hover {
-  color: #ffcc00;
+color: #ffcc00;
 }
 
 /* Sections */
 .section {
-  padding: 100px 20px;
-  text-align: center;
+padding: 100px 20px;
+text-align: center;
+}
+
+.about {
+background: #fff;
 }
 
 .profile-img {
-  width: 150px;
-  border-radius: 50%;
-  margin-bottom: 15px;
+width: 150px;
+border-radius: 50%;
+margin-bottom: 15px;
 }
 
-.skills, .contact {
-  background: #eaf2f8;
+.skills {
+background: #eaf2f8;
+}
+
+.skills-grid {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.skill {
+background: #1e3c72;
+color: #fff;
+padding: 30px;
+border-radius: 50%;
+width: 120px;
+height: 120px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+transition: transform 0.3s;
+}
+
+.skill:hover {
+transform: scale(1.1);
 }
 
 .projects {
-  background: #fff;
+background: #fff;
 }
 
-ul {
-  list-style: none;
-  margin-top: 15px;
+.projects-grid {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 20px;
 }
 
-ul li {
-  background: #1e3c72;
-  color: #fff;
-  margin: 5px auto;
-  padding: 10px;
-  border-radius: 10px;
-  width: fit-content;
+.project-card {
+background: #f0f0f0;
+padding: 15px;
+border-radius: 10px;
+width: 250px;
 }
 
-/* Portfolio Hide/Show */
-.portfolio {
-  display: none;
-  margin-top: 60px; /* กัน navbar */
+.project-card img {
+max-width: 100%;
+border-radius: 10px;
 }
 
-.portfolio.active {
-  display: block;
+.contact {
+background: #eaf2f8;
 }
+
+.contact a {
+color: #1e3c72;
+text-decoration: none;
+}
+
+.contact a:hover {
+text-decoration: underline;
+}
+
+/* Footer */
+footer {
+background: #1e3c72;
+color: #fff;
+text-align: center;
+padding: 15px;
